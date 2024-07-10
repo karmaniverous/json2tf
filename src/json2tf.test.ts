@@ -16,8 +16,6 @@ describe('json', function () {
 
     const tf = json2tf(json);
 
-    console.log(tf);
-
     expect(tf).to.equal(`{
     a = 1
     b = "two"
