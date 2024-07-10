@@ -4,7 +4,6 @@ import jsonPlugin from '@rollup/plugin-json';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import terserPlugin from '@rollup/plugin-terser';
 import typescriptPlugin from '@rollup/plugin-typescript';
-import fs from 'fs-extra';
 import type { InputOptions, OutputOptions, RollupOptions } from 'rollup';
 import dtsPlugin from 'rollup-plugin-dts';
 
@@ -33,8 +32,6 @@ const iifeAliases = [
 const iifeCommonOutputOptions: OutputOptions = {
   name: packageName ?? 'unknown',
 };
-
-const cliCommands = await fs.readdir('src/cli');
 
 const config: RollupOptions[] = [
   // ESM output.
@@ -111,19 +108,6 @@ const config: RollupOptions[] = [
       },
     ],
   },
-
-  // CLI output.
-  ...cliCommands.map<RollupOptions>((c) => ({
-    ...commonInputOptions,
-    input: `src/cli/${c}/index.ts`,
-    output: [
-      {
-        extend: true,
-        file: `${outputPath}/${c}.cli.mjs`,
-        format: 'esm',
-      },
-    ],
-  })),
 ];
 
 export default config;

@@ -1,18 +1,14 @@
 {
   "author": "Jason Williscroft",
-  "bin": {
-    "mycli": "./dist/mycli.cli.mjs"
-  },
   "bugs": {
-    "url": "https://github.com/karmaniverous/npm-package-template-ts/issues"
+    "url": "https://github.com/karmaniverous/json2tf/issues"
   },
   "dependencies": {
     "commander": "^12.1.0",
     "tslog": "^4.9.3"
   },
-  "description": "A feature-rich NPM package template for TypeScript projects.",
+  "description": "Convert complex JSON objects to Terraform notation.",
   "devDependencies": {
-    "@commander-js/extra-typings": "^12.1.0",
     "@eslint/js": "^9.6.0",
     "@rollup/plugin-alias": "^5.1.0",
     "@rollup/plugin-commonjs": "^26.0.1",
@@ -67,7 +63,7 @@
   "files": [
     "dist"
   ],
-  "homepage": "https://github.com/karmaniverous/npm-package-template-ts#readme",
+  "homepage": "https://github.com/karmaniverous/json2tf#readme",
   "keywords": [
     "chai",
     "eslint",
@@ -83,7 +79,7 @@
   "license": "BSD-3-Clause",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
-  "name": "@karmaniverous/npm-package-template-ts",
+  "name": "@karmaniverous/json2tf",
   "publishConfig": {
     "access": "public"
   },
@@ -114,7 +110,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/karmaniverous/npm-package-template-ts.git"
+    "url": "git+https://github.com/karmaniverous/json2tf.git"
   },
   "scripts": {
     "build": "rimraf dist && rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
@@ -127,5 +123,5 @@
   },
   "type": "module",
   "types": "dist/index.d.ts",
-  "version": "0.5.2"
+  "version": "0.0.0"
 }
