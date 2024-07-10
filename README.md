@@ -1,4 +1,4 @@
-# json2tf
+# JSON to Terraform
 
 This package exports a single function, `json2tf`, which takes a JSON object and returns a Terraform configuration string.
 
