@@ -5,6 +5,7 @@
   },
   "dependencies": {
     "commander": "^12.1.0",
+    "is-what": "^5.0.2",
     "tslog": "^4.9.3"
   },
   "description": "Convert complex JSON objects to Terraform notation.",
@@ -21,6 +22,7 @@
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint-plugin-mocha": "^10.4.0",
     "@types/fs-extra": "^11.0.4",
+    "@types/lodash": "^4.17.6",
     "@types/mocha": "^10.0.7",
     "@types/node": "^20.14.9",
     "auto-changelog": "^2.4.0",

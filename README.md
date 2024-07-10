@@ -19,13 +19,44 @@ const json = {
   a: 1,
   b: 'two',
   c: {
-    x: 7,
+    x: null,
     y: 'eight',
     z: [42, 69, 'one million dollars'],
   },
 };
 
 console.log(json2tf(json));
+
+/*
+{
+    a = 1
+    b = "two"
+    c = {
+        x = null
+        y = "eight"
+        z = [
+            42,
+            69,
+            "one million dollars"
+        ]
+    }
+}
+*/
+```
+
+`json2tf` takes an optional second argument that looks like this:
+
+```ts
+/**
+ * json2tf options
+ *
+ * @param offset - The number of spaces to indent the entire block.
+ * @param tabWidth - The number of spaces to use for each tab.
+ */
+interface Json2tfOptions {
+  offset?: number;
+  tabWidth?: number;
+}
 ```
 
 ---
