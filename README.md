@@ -1,65 +1,23 @@
-# JSON to Terraform
+> **_Where other tools use special syntax & structure to ENCAPSULATE Terraform code, Metastructure uses a powerful template engine to GENERATE Terraform code._**
 
-This package exports a single function, `json2tf`, which takes a JSON object and returns a Terraform configuration string.
+## Welcome to Metastructure!
 
-It is NOT designed to output modules, resources, or other top-level objects. Instead, it enables the generation of the data values INSIDE those objects.
+**Metastructure** is a command-line tool that works in conjunction with [Terraform](https://www.terraform.io/) and all the other things to generate & manage a complex AWS infrastructure.
 
-Installation:
+With **Metastructure** you can...
 
-```bash
-npm install @karmaniverous/json2tf
-```
+- **_Write a true global configuration._** Manage your entire enterprise from a single YAML file.
 
-Usage:
+- **_Actually use SSO in Terraform._** Zero credentials management, ever.
 
-```ts
-import { json2tf } from '@karmaniverous/json2tf';
+- **_Integrate all the things._** Your configuration goes where Terraform can't.
 
-const json = {
-  a: 1,
-  b: 'two',
-  c: {
-    x: null,
-    y: 'eight',
-    z: [42, 69, 'one million dollars'],
-  },
-};
+- **_DRY up your code base._** Because close doesn't count.
 
-console.log(json2tf(json));
+**Metastructure** leverages the tools you already use to do the things you already do... just faster, smaller, and safer.
 
-/*
-{
-    a = 1
-    b = "two"
-    c = {
-        x = null
-        y = "eight"
-        z = [
-            42,
-            69,
-            "one million dollars"
-        ]
-    }
-}
-*/
-```
-
-`json2tf` takes an optional second argument that looks like this:
-
-```ts
-/**
- * json2tf options
- *
- * @param offset - The number of spaces to indent the entire block.
- * @param tabWidth - The number of spaces to use for each tab.
- */
-interface Json2tfOptions {
-  offset?: number;
-  tabWidth?: number;
-}
-```
+Explore the [Metastructure Wiki](https://github.com/karmaniverous/metastructure/wiki) to learn more, or clone the [Template Repository](https://github.com/karmaniverous/metastructure-template) to get started!
 
 ---
 
-See more great templates and other tools on
-[my GitHub Profile](https://github.com/karmaniverous)!
+Built for you with ❤️ on Bali! Find more great tools & templates on [my GitHub Profile](https://github.com/karmaniverous).
